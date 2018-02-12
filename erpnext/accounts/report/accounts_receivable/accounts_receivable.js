@@ -23,10 +23,10 @@ frappe.query_reports["Accounts Receivable"] = {
 			"options": "Customer Group"
 		},
 		{
-			"fieldname":"credit_days_based_on",
-			"label": __("Credit Days Based On"),
-			"fieldtype": "Select",
-			"options": "\nFixed Days\nLast Day of the Next Month"
+			"fieldname":"payment_terms_template",
+			"label": __("Payment Terms Template"),
+			"fieldtype": "Link",
+			"options": "Payment Terms Template"
 		},
 		{
 			"fieldtype": "Break",
@@ -64,6 +64,11 @@ frappe.query_reports["Accounts Receivable"] = {
 			"fieldtype": "Int",
 			"default": "90",
 			"reqd": 1
+		},
+		{
+			"fieldname":"show_pdc_in_print",
+			"label": __("Show PDC in Print"),
+			"fieldtype": "Check",
 		}
 	],
 
